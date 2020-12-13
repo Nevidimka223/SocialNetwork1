@@ -5,6 +5,7 @@
 front/node_modules
 front/.pnp
 front/.pnp.js
+front/.env
 
 # testing
 front/coverage
@@ -27,7 +28,7 @@ front/yarn-error.log*
 # __________________________________________________________________________________________________________
 
 api/node_modules
-
+api/.env
 
 
 
