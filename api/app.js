@@ -1,12 +1,16 @@
-const express = require('express')
-const configService = require('./services/configService')
+const express = require('express');
+const configService = require('./services/configService');
 
-const app = express()
-const port = configService.getPort()
+const app = express();
+const port = configService.getPort();
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+const postsRouter = require('./routes/posts');
+
+app.use ('/',(req,res)=>{
+  res.send('HI')
+});
+
+app.use('/', postsRouter); 
 
 app.use((err, req, res, next) => {
   res.status(500).send('500: Internal Server Error');
