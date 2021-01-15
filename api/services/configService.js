@@ -19,6 +19,18 @@ class ConfigService {
   getPort() {
     return this._envData.PORT;
   }
+
+  getPGCredentials() {
+    return {
+      client: this._envData.DB_CLIENT,
+      connection: {
+        host: this._envData.DB_HOST,
+        user: this._envData.DB_USER,
+        password: this._envData.DB_PWD,
+        database: this._envData.DB_NAME,
+      },
+    };
+  }
 }
   
 module.exports = ConfigService.getInstance();
