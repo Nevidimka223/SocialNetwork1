@@ -1,11 +1,13 @@
-import BodyContainer from './Containers/Body';
-import HeaderContainer from './Containers/Header';
+// import BodyContainer from './Containers/Body';
+// import HeaderContainer from './Containers/Header';
+import PageContainer from './Containers/Page';
 
 function App() {
   return (
     <div className="App">
-     <BodyContainer />;
-     <HeaderContainer />;
+     {/* <HeaderContainer />
+     <BodyContainer /> */}
+     <PageContainer />
     </div>
   );
 }
